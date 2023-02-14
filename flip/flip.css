@@ -1,40 +1,43 @@
-.fade-in {
+.flip-in {
     animation: fade-in 0.3s ease-in-out;
     opacity: 1;
 }
 
-.fade-out {
+.flip-out {
     animation: fade-out 0.3s ease-in-out;
     opacity: 0;
 }
 
-@keyframes fade-in {
+@keyframes flip-in {
     0% {
-        transform: translateX(0);
+        transform: rotateX(180deg);
         scale: 1;
         opacity: 0;
     }
     50% {
-        transform: translateX(2rem);
-        scale: 1.03;
+        transform: rotateX(90deg);
+        scale: 1.1;
     }
     100% {
-        transform: translateX(0);
+        transform: rotateX(90deg);
         scale: 1;
         opacity: 1;
     }
 }
 
-@keyframes fade-out {
+@keyframes flip-out {
     0% {
-        transform: translateX(0);
+        transform: rotateX(0);
         scale: 1;
         opacity: 1;
     }
+    50% {
+        transform: rotateX(-90deg);
+        scale: 1.1;
+        opacity: 0.5;
+    }
     100% {
-        transform: translateX(-4rem);
-        scale: 0.9;
+        scale: 1;
         opacity: 0;
     }
 }
-

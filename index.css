@@ -1,0 +1,33 @@
+body {
+    font-size: 62.5%;
+    background-color: #111;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    width: 30rem;
+    height: 15rem;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 4rem;
+
+    border-radius: 2rem;
+}
+
+p {
+    font-weight: 700;
+    font-size: 5rem;
+    color: white;
+}
