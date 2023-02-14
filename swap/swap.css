@@ -26,34 +26,6 @@ section {
     border-radius: 2rem;
 }
 
-@keyframes fade-in {
-    0% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        transform: translate(1rem, 1rem);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes fade-out {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(-1rem, -1rem);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
 p {
     font-weight: 700;
     font-size: 5rem;
@@ -62,11 +34,41 @@ p {
 
 #card1 {
     background-color: blueviolet;
-    animation: fade-out 1s ease-in-out;
+    animation: fade-out 0.3s ease-in-out;
 }
 
 #card2 {
     background-color: coral;
-    animation: fade-in 1s ease-in-out;
+    animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(1rem, 1rem);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-1rem, -1rem);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
 }
 
