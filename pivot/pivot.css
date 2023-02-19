@@ -1,0 +1,53 @@
+section {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: -50%;
+
+    width: 70rem;
+    height: 70rem;
+
+    /* debug border */
+    border: red solid 0.2rem;
+
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.y-plain {
+    transform: rotateX(-16.8deg) rotateY(60deg);
+    perspective: 280rem;
+    perspective-origin: -300% -180%;
+}
+
+.pivot {
+    transform-origin: right;
+    transform: rotateY(-180deg);
+
+    opacity: 0;
+}
+
+.animate {
+    animation: pivot 1.5s cubic-bezier(.93,.71,.47,1);
+    animation-fill-mode: forwards;
+}
+@keyframes pivot {
+    0% {
+        transform: rotateY(-180deg);
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    75% {
+        transform: rotateY(5deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
